@@ -23,9 +23,7 @@ const Characters = () => {
 
   const getCharacters = async () => {
     try {
-      let res = await Axios.get(
-        `https://www.potterapi.com/v1/characters?key=${API_KEY}`
-      );
+      let res = await Axios.get(`https://www.potterapi.com/v1/characters?key=${API_KEY}`);
       setCharacters(res.data);
       console.log(res.data);
     } catch (err) {
